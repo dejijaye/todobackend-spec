@@ -1,4 +1,4 @@
-var chai = require('chai'),]
+var chai = require('chai'),
     should = chai.should,
     expect = chai.expect,
     Promise = require('bluebird'),
@@ -21,15 +21,15 @@ describe('Cross Origin Requests', function() {
   it('should return the correct CORS headers', function() {
     // body...
     return assert(result, "headers").to.contain.all.keys([
-      'access-controll-allow-origin',
-      'access-controll-allow-methods',
-      'access-controll-allow-headers'
+      'access-control-allow-origin',
+      'access-control-allow-methods',
+      'access-control-allow-headers'
     ]);
   });
 
   it('should allow all origins', function() {
     // body...
-    return assert(result, "headers.access-controll-allow-origin").to.equal('*');
+    return assert(result, "headers.access-control-allow-origin").to.equal('*');
   });
 
 });
